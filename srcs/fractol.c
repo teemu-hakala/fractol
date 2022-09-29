@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:17:26 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:32:44 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 12:41:46 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int	fractal_type(t_fct *fractal, char *input)
 {
 	if (ft_strcmp(input, STR_JULIA) == EXIT_SUCCESS)
-		fractal->type = FCT_JULIA;
+		fractal->type = julia;
 	else if (ft_strcmp(input, STR_MANDELBROT) == EXIT_SUCCESS)
-		fractal->type = FCT_MANDELBROT;
+		fractal->type = mandelbrot;
 	else if (ft_strcmp(input, STR_BURNINGSHIP) == EXIT_SUCCESS)
-		fractal->type = FCT_BURNINGSHIP;
+		fractal->type = burningship;
 	else
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);

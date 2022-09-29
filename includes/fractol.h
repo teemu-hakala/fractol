@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:36:12 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 12:51:37 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@
 # include <stdlib.h>
 # include "libft.h"
 
-typedef enum e_fractal_type
+typedef s_bool
 {
-	FCT_JULIA,
-	FCT_MANDELBROT,
-	FCT_BURNINGSHIP
-}	t_type;
+
+}	t_boo;
+
+typedef void	(*t_ftype)(t_prg *);
 
 typedef s_fractal
 {
-
+	t_ftype	type;
 }	t_fct;
 
 typedef s_minilibx_image
@@ -55,12 +55,15 @@ typedef s_minilibx
 
 typedef s_mouse
 {
-
+	t_pt	prev;
+	t_pt	curr;
+	t_pt	diff;
+	t_bool	isdown;
 }	t_mse;
 
 typedef s_keyboard
 {
-
+	t_bool	cmd_toggled;
 }	t_key;
 
 typedef s_user_inputs
@@ -78,5 +81,8 @@ typedef struct s_program
 
 void	usage(void);
 void	exit_msg(const char *message, unsigned char value);
+void	julia(t_prg *p);
+void	mandelbrot(t_prg *p);
+void	burningship(t_prg *p);
 
 #endif

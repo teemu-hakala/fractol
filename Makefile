@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 12:31:39 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 12:54:31 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,12 @@ FILES = \
 	loop \
 	draw \
 	image \
-	init
+	init \
+	init_help \
+	fractals \
+	fractal_julia \
+	fractal_mandelbrot \
+	fractal_burningship
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))

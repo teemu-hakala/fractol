@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:35:41 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 12:40:41 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void	init_img(t_mlx *m)
 
 void	init_fct(t_fct *f)
 {
-
+	f->iter = 10;
+	f->zoom = 1;
 }
 
 void	init_inp(t_inp *i)
