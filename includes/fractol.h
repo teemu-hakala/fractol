@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 14:23:34 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 15:23:46 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define WIN_NAME "thakala's fract'ol"
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
-
+# include <math.h>
 # include <stdlib.h>
 # include "libft.h"
 # include "mlx.h"
@@ -30,6 +30,19 @@ typedef enum e_bool
 	FALSE,
 	TRUE
 }	t_bool;
+
+typedef enum e_palette
+{
+	PALETTE_GRAYSCALE,
+	PALETTE_BLUE
+}	t_pltt;
+
+typedef enum e_rgb_shifts
+{
+	RGB_RED = 16,
+	RGB_GRN = 8,
+	RGB_BLU = 0
+}	t_rgb;
 
 typedef struct s_point
 {
@@ -50,6 +63,7 @@ typedef struct s_fractol
 	t_ftype		type;
 	uint64_t	iter;
 	uint64_t	zoom; //perhaps a floating-point type instead?
+	t_pltt		pltt;
 }	t_fct;
 
 typedef struct s_minilibx_image
