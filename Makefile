@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 16:39:19 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 16:40:44 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ FILES = \
 	scale \
 	palette \
 	color_graphs \
-	pixelput
+	pixelput \
+	exit
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))
