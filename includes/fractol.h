@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:14:33 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:24:45 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,14 @@ typedef struct s_long_double_coordinate
 	long double	col;
 }	t_ldbl_pt;
 
-typedef void	(*t_ftype)(t_prg *);
+struct s_program
+{
+	t_fct	*fct;
+	t_mlx	*mlx;
+	t_ipt	*ipt;
+};
+
+typedef void	(*t_ftype)(struct s_program *);
 
 typedef struct s_fractol
 {
@@ -68,6 +75,7 @@ typedef struct s_fractol
 	uint64_t	zoom; //perhaps a floating-point type instead?
 	t_pltt		pltt;
 }	t_fct;
+
 
 typedef struct s_minilibx_image
 {
@@ -105,12 +113,7 @@ typedef struct s_user_inputs
 	t_key	key;
 }	t_ipt;
 
-typedef struct s_program
-{
-	t_fct	*fct;
-	t_mlx	*mlx;
-	t_ipt	*ipt;
-}	t_prg;
+typedef struct s_program {}	t_prg;
 
 void		usage(void);
 void		exit_msg(const char *message, unsigned char value);
