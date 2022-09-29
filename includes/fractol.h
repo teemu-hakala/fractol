@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:33:25 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:34:56 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,10 @@ void		pixelput(t_img *img, int x, int y, int colour);
 int			loop(t_prg *p);
 void		fetch_new_image(t_mlx *m);
 t_prg		*init(t_prg *p);
+void		init_mlx(t_mlx *m);
+void		init_win(t_mlx *m);
+void		init_img(t_mlx *m);
+void		init_fct(t_fct *f);
+void		init_ipt(t_ipt *i);
 
 #endif
