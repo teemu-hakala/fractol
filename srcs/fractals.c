@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 17:20:50 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 17:32:44 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ void	julia(t_prg *p)
 
 void	mandelbrot(t_prg *pr)
 {
-	t_pt		px;
-	t_ldbl_pt	p0;
+	static t_ldbl_pt	scales;
+	t_pt				px;
+	t_ldbl_pt			p0;
 
+	mandelbrot_scales(&scales);
 	px.row = 0;
 	while (px.row < WIN_HEIGHT)
 	{
 		px.col = 0;
 		while (px.col < WIN_WIDTH)
 		{
-			p0 = (t_ldbl_pt){.row = scale(-1.12L, WIN_HEIGHT, px.row, 1.12L), \
-				.col = scale(-2.00L, WIN_WIDTH, px.col, 0.47L)};
+			mandelbrot_scales(&p0, px);
 			pixelput(&pr->mlx->img, px.col, px.row, mandelbrot_plot(pr, &p0));
 			px.col++;
 		}
