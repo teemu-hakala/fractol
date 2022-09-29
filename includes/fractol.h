@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:29:22 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:31:14 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ typedef struct s_long_double_coordinate
 	long double	col;
 }	t_ldbl_pt;
 
-typedef struct s_fractol {}	t_fct;
-typedef struct s_minilibx {}	t_mlx;
-typedef struct s_mouse {}	t_mse;
-typedef struct s_keyboard {}	t_key;
-typedef struct s_user_inputs {}	t_ipt;
-typedef struct s_program {}	t_prg;
+typedef struct s_fractol		t_fct;
+typedef struct s_minilibx		t_mlx;
+typedef struct s_mouse			t_mse;
+typedef struct s_keyboard		t_key;
+typedef struct s_user_inputs	t_ipt;
+typedef struct s_program		t_prg;
 typedef void	(*t_ftype)(struct s_program *);
 
 struct s_program
@@ -107,16 +107,16 @@ struct s_mouse
 	t_bool	isdown;
 };
 
-typedef struct s_keyboard
+struct s_keyboard
 {
 	t_bool	cmd_toggled;
-}	t_key;
+};
 
-typedef struct s_user_inputs
+struct s_user_inputs
 {
 	t_mse	mse;
 	t_key	key;
-}	t_ipt;
+};
 
 void		usage(void);
 void		exit_msg(const char *message, unsigned char value);
