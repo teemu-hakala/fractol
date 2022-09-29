@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 13:16:34 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 14:23:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ typedef struct s_point
 	int		row;
 	int		col;
 }	t_pt;
+
+typedef struct s_long_double_coordinate
+{
+	long double	row;
+	long double	col;
+}	t_ldbl_pt;
 
 typedef void	(*t_ftype)(t_prg *);
 
@@ -89,10 +95,12 @@ typedef struct s_program
 	t_ipt	*ipt;
 }	t_prg;
 
-void	usage(void);
-void	exit_msg(const char *message, unsigned char value);
-void	julia(t_prg *p);
-void	mandelbrot(t_prg *p);
-void	burningship(t_prg *p);
+void		usage(void);
+void		exit_msg(const char *message, unsigned char value);
+void		julia(t_prg *p);
+void		mandelbrot(t_prg *p);
+void		burningship(t_prg *p);
+long double	mandelbrot_scale_y(int row);
+long double	mandelbrot_scale_x(int col);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 12:54:31 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 14:25:46 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ FILES = \
 	fractals \
 	fractal_julia \
 	fractal_mandelbrot \
-	fractal_burningship
+	fractal_burningship \
+	scale
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))
