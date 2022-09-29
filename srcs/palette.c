@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:39:07 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:40:11 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 15:47:58 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,21 @@ static int	palette_mono(t_prg *pr, uint64_t iter, t_rgb ch)
 	long double	iteration_percentage;
 
 	iteration_percentage = (long double) iter / (long double) pr->fct->iter;
-	return ((int)(0xFF * iteration_percentage) << ch);
+	return ((int)(eight_bit_color_graph_sqrt_x_flip(iteration_percentage)) \
+		<< ch);
 }
 
 static int	palette_grayscale(t_prg *pr, uint64_t iter)
 {
 	long double	iteration_percentage;
+	int			colour_intensity;
 
 	iteration_percentage = (long double) iter / (long double) pr->fct->iter;
-	return ((int)(0xFF * iteration_percentage) << RGB_RED \
-		| (int)(0xFF * iteration_percentage) << RGB_GRN \
-		| (int)(0xFF * iteration_percentage) << RGB_BLU);
+	colour_intensity = (int)(0xFF * \
+		eight_bit_color_graph_sqrt_x_flip(iteration_percentage));
+	return (colour_intensity << RGB_RED \
+		| colour_intensity << RGB_GRN \
+		| colour_intensity << RGB_BLU);
 }
 
 int	palette(t_prg *pr, uint64_t iteration)
