@@ -6,14 +6,19 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 11:15:04 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 12:31:39 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 
 FILES = \
-	fractol
+	fractol \
+	usage \
+	loop \
+	draw \
+	image \
+	init
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))

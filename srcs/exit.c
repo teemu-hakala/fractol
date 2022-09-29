@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   usage.c                                            :+:      :+:    :+:   */
+/*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 11:30:54 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:12:38 by thakala          ###   ########.fr       */
+/*   Created: 2022/09/29 12:10:38 by thakala           #+#    #+#             */
+/*   Updated: 2022/09/29 12:11:57 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	usage(void)
+void	exit_msg(const char *message, unsigned char value)
 {
-	exit_msg("Usage: ./fractol {julia, mandelbrot, burningship}\n",
-		EXIT_SUCCESS);
+	ft_putstr(message);
+	exit(value);
 }

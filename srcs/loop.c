@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   usage.c                                            :+:      :+:    :+:   */
+/*   loop.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 11:30:54 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:12:38 by thakala          ###   ########.fr       */
+/*   Created: 2022/09/29 12:02:47 by thakala           #+#    #+#             */
+/*   Updated: 2022/09/29 12:04:24 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	usage(void)
+void	loop(t_prg *p)
 {
-	exit_msg("Usage: ./fractol {julia, mandelbrot, burningship}\n",
-		EXIT_SUCCESS);
+	mlx_loop(p->mlx->mlx);
 }
