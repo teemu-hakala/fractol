@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 15:49:56 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 15:53:04 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ FILES = \
 	fractal_burningship \
 	scale \
 	palette \
-	color_graphs
+	color_graphs \
+	pixelput
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))
