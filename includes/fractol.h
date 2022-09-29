@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:51:37 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 13:08:47 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,20 @@
 # include <stdlib.h>
 # include "libft.h"
 
-typedef s_bool
+typedef enum e_bool
 {
-
-}	t_boo;
+	FALSE,
+	TRUE
+}	t_bool;
 
 typedef void	(*t_ftype)(t_prg *);
 
-typedef s_fractal
+typedef struct s_fractal
 {
 	t_ftype	type;
 }	t_fct;
 
-typedef s_minilibx_image
+typedef struct s_minilibx_image
 {
 	void	*img;
 	char	*addr;
@@ -46,14 +47,14 @@ typedef s_minilibx_image
 	int		endian;
 }	t_img;
 
-typedef s_minilibx
+typedef struct s_minilibx
 {
 	void	*mlx;
 	void	*win;
 	t_img	img;
 }	t_mlx;
 
-typedef s_mouse
+typedef struct s_mouse
 {
 	t_pt	prev;
 	t_pt	curr;
@@ -61,12 +62,12 @@ typedef s_mouse
 	t_bool	isdown;
 }	t_mse;
 
-typedef s_keyboard
+typedef struct s_keyboard
 {
 	t_bool	cmd_toggled;
 }	t_key;
 
-typedef s_user_inputs
+typedef struct s_user_inputs
 {
 	t_mse	mse;
 	t_key	key;
