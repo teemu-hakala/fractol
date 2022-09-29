@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:43:14 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:00:21 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define WIN_NAME "thakala's fract'ol"
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
-# define TWO_POW_EIGHT (0x1 << 8)
+# define TWO_POW_EIGHT 256
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -120,5 +120,6 @@ void		burningship(t_prg *p);
 long double	mandelbrot_scale_y(int row);
 long double	mandelbrot_scale_x(int col);
 long double	eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
+t_prg		*draw(t_prg *p);
 
 #endif

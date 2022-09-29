@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:51:57 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 15:59:10 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	init_fct(t_fct *f)
 	f->iter = 10;
 	f->zoom = 1;
 	f->pltt = PALETTE_GRAYSCALE;
+	f->type = julia;
 }
 
 void	init_ipt(t_ipt *i)
