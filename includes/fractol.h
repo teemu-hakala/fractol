@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:00:21 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:02:06 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,9 +117,9 @@ void		exit_msg(const char *message, unsigned char value);
 void		julia(t_prg *p);
 void		mandelbrot(t_prg *p);
 void		burningship(t_prg *p);
-long double	mandelbrot_scale_y(int row);
-long double	mandelbrot_scale_x(int col);
+long double	scale(long double low, int interval, int pos, long double high)
 long double	eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
+int			palette(t_prg *pr, uint64_t iteration);
 t_prg		*draw(t_prg *p);
 
 #endif
