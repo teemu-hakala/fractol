@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 17:32:44 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 17:39:58 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ void	julia(t_prg *p)
 
 void	mandelbrot(t_prg *pr)
 {
-	static t_ldbl_pt	scales;
 	t_pt				px;
 	t_ldbl_pt			p0;
 
-	mandelbrot_scales(&scales);
 	px.row = 0;
 	while (px.row < WIN_HEIGHT)
 	{
