@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:24:45 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:29:22 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,14 @@ typedef struct s_long_double_coordinate
 	long double	col;
 }	t_ldbl_pt;
 
+typedef struct s_fractol {}	t_fct;
+typedef struct s_minilibx {}	t_mlx;
+typedef struct s_mouse {}	t_mse;
+typedef struct s_keyboard {}	t_key;
+typedef struct s_user_inputs {}	t_ipt;
+typedef struct s_program {}	t_prg;
+typedef void	(*t_ftype)(struct s_program *);
+
 struct s_program
 {
 	t_fct	*fct;
@@ -66,16 +74,13 @@ struct s_program
 	t_ipt	*ipt;
 };
 
-typedef void	(*t_ftype)(struct s_program *);
-
-typedef struct s_fractol
+struct s_fractol
 {
 	t_ftype		type;
 	uint64_t	iter;
 	uint64_t	zoom; //perhaps a floating-point type instead?
 	t_pltt		pltt;
-}	t_fct;
-
+};
 
 typedef struct s_minilibx_image
 {
@@ -87,20 +92,20 @@ typedef struct s_minilibx_image
 	int		endian;
 }	t_img;
 
-typedef struct s_minilibx
+struct s_minilibx
 {
 	void	*mlx;
 	void	*win;
 	t_img	img;
-}	t_mlx;
+};
 
-typedef struct s_mouse
+struct s_mouse
 {
 	t_pt	prev;
 	t_pt	curr;
 	t_pt	diff;
 	t_bool	isdown;
-}	t_mse;
+};
 
 typedef struct s_keyboard
 {
@@ -112,8 +117,6 @@ typedef struct s_user_inputs
 	t_mse	mse;
 	t_key	key;
 }	t_ipt;
-
-typedef struct s_program {}	t_prg;
 
 void		usage(void);
 void		exit_msg(const char *message, unsigned char value);
