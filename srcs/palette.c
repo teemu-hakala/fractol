@@ -6,18 +6,18 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:39:07 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:26:48 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 15:33:17 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static int	palette_blue(t_prg *pr, uint64_t iter)
+static int	palette_mono(t_prg *pr, uint64_t iter, t_rgb ch)
 {
 	long double	intensity_percentage;
 
 	intensity_percentage = (long double) iter / (long double) pr->fct->iter;
-	return ((int)(0xFF * intensity_percentage) << RGB_BLU);
+	return ((int)(0xFF * intensity_percentage) << ch);
 }
 
 static int	palette_grayscale(t_prg *pr, uint64_t iter)
@@ -36,8 +36,7 @@ int	palette(t_prg *pr, uint64_t iteration)
 	{
 		if (pr->fct->pltt == PALETTE_GRAYSCALE)
 			return (palette_grayscale(pr, iteration));
-		if (pr->fct->pltt == PALETTE_BLUE)
-			return (palette_blue(pr, iteration));
+		return (palette_mono(pr, iteration, 8 * pr->fct->pltt));
 	}
 	return (0);
 }

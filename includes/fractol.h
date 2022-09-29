@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:23:46 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 15:33:25 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ typedef enum e_bool
 
 typedef enum e_palette
 {
-	PALETTE_GRAYSCALE,
-	PALETTE_BLUE
+	PALETTE_MONO_BLU = 0,
+	PALETTE_MONO_GRN = 1,
+	PALETTE_MONO_RED = 2,
+	PALETTE_GRAYSCALE
 }	t_pltt;
 
 typedef enum e_rgb_shifts
