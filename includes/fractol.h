@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:34:56 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:37:22 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,5 +136,6 @@ void		init_win(t_mlx *m);
 void		init_img(t_mlx *m);
 void		init_fct(t_fct *f);
 void		init_ipt(t_ipt *i);
+int		mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
 
 #endif

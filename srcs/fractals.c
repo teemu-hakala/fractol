@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:04:39 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:37:05 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	julia(t_prg *p)
 {
-
+	(void)p;
 }
 
 void	mandelbrot(t_prg *pr)
@@ -38,5 +38,5 @@ void	mandelbrot(t_prg *pr)
 
 void	burningship(t_prg *p)
 {
-
+	(void)p;
 }
