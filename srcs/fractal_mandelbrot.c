@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:09:52 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:53:39 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0)
 	i = 0;
 	while (p2.col + p2.row <= 4.0L && i < pr->fct->iter)
 	{
-		p0->col = 2 * pt.col * pt.row + p0->row;
-		p0->row = p2.col - p2.row + p0->col;
+		pt->col = 2 * pt.col * pt.row + p0->row;
+		pt->row = p2.col - p2.row + p0->col;
 		p2.col = pt.col * pt.col;
 		p2.row = pt.row * pt.row;
 		i++;

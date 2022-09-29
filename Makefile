@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 16:40:44 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 16:43:42 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ HDRS = libft/libft.h includes/fractol.h
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+CFLAGS += -g
 
 MATH = -lm
 MLX = -lmlx -framework OpenGL -framework AppKit

@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:14:38 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:49:40 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ void	init_img(t_mlx *m)
 
 void	init_fct(t_fct *f)
 {
-	f->iter = 10;
+	f->iter = INITIAL_ITERATIONS;
 	f->zoom = 1;
 	f->pltt = PALETTE_GRAYSCALE;
-	f->type = julia;
+	f->type = mandelbrot;//julia;
 }
 
 void	init_ipt(t_ipt *i)
