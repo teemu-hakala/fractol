@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 15:53:04 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/29 16:39:19 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ all: $(NAME)
 
 $(NAME): .prerequisites libft/libft.a $(OBJS)
 	touch .prerequisites
-	$(CC) $(CFLAGS) $(INCS) $(MATH) $(MLX) libft/libft.a -o $@
+	$(CC) $(CFLAGS) $(INCS) $(MATH) $(MLX) libft/libft.a $(OBJS) -o $@
 
 $(OBJS): $(OBJS_DIR)/%.o:$(SRCS_DIR)/%.c
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
