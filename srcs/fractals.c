@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 17:17:11 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 17:20:50 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	mandelbrot(t_prg *pr)
 	t_ldbl_pt	p0;
 
 	px.row = 0;
-	while (px.row < WIN_WIDTH)
+	while (px.row < WIN_HEIGHT)
 	{
 		px.col = 0;
-		while (px.col < WIN_HEIGHT)
+		while (px.col < WIN_WIDTH)
 		{
 			p0 = (t_ldbl_pt){.row = scale(-1.12L, WIN_HEIGHT, px.row, 1.12L), \
 				.col = scale(-2.00L, WIN_WIDTH, px.col, 0.47L)};
