@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 15:59:10 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:14:38 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	init_win(t_mlx *m)
 
 void	init_img(t_mlx *m)
 {
-	m->img.img = mlx_new_image(m->mlx, WIN_WIDTH, WIN_HEIGHT);
-	m->img.addr = mlx_get_data_addr(m->img.img, &m->img.bits_per_pixel, \
-		&m->img.line_length, &m->img.endian);
+	fetch_new_image(m);
 	m->img.bytes_per_pixel = m->img.bits_per_pixel / 8;
 }
 

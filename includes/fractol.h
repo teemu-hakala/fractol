@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 16:07:02 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 16:14:33 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,6 @@ int			palette(t_prg *pr, uint64_t iteration);
 t_prg		*draw(t_prg *p);
 void		pixelput(t_img *img, int x, int y, int colour);
 int			loop(t_prg *p);
+void		fetch_new_image(t_mlx *m);
 
 #endif
