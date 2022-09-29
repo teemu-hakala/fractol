@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 13:08:47 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 13:16:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 # include <stdlib.h>
 # include "libft.h"
+# include "mlx.h"
 
 typedef enum e_bool
 {
@@ -30,11 +31,19 @@ typedef enum e_bool
 	TRUE
 }	t_bool;
 
+typedef struct s_point
+{
+	int		row;
+	int		col;
+}	t_pt;
+
 typedef void	(*t_ftype)(t_prg *);
 
-typedef struct s_fractal
+typedef struct s_fractol
 {
-	t_ftype	type;
+	t_ftype		type;
+	uint64_t	iter;
+	uint64_t	zoom; //perhaps a floating-point type instead?
 }	t_fct;
 
 typedef struct s_minilibx_image
@@ -77,7 +86,7 @@ typedef struct s_program
 {
 	t_fct	*fct;
 	t_mlx	*mlx;
-	t_ipt	*inp;
+	t_ipt	*ipt;
 }	t_prg;
 
 void	usage(void);

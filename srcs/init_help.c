@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 12:55:59 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/29 13:15:59 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	init_fct(t_fct *f)
 	f->zoom = 1;
 }
 
-void	init_inp(t_inp *i)
+void	init_ipt(t_ipt *i)
 {
 	i->mse = (t_mse){};
 	i->key = (t_key){};
