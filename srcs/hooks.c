@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   loop.c                                             :+:      :+:    :+:   */
+/*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 12:02:47 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:05:47 by thakala          ###   ########.fr       */
+/*   Created: 2022/09/30 13:17:08 by thakala           #+#    #+#             */
+/*   Updated: 2022/09/30 13:22:20 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	loop(t_prg *p)
+void	hooks(t_prg *p)
 {
-	mlx_loop_hook(p->mlx->mlx, vary_julia_constant, p);
-	mlx_loop(p->mlx->mlx);
-	return (EXIT_SUCCESS);
+	mlx_hook(p->mlx->win, ON_KEYDOWN, 0, key_handler, p);
+	mlx_hook(p->mlx->win, ON_DESTROY, 0, close_success, p);
+	mlx_hook(p->mlx->win, ON_MOUSEDOWN, 0, mouse_handler_down, p);
+	mlx_hook(p->mlx->win, ON_MOUSEMOVE, 0, mouse_handler_move, p);
+	mlx_hook(p->mlx->win, ON_MOUSEUP, 0, mouse_handler_up, p);
 }

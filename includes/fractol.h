@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:00:20 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 13:32:05 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,36 @@ typedef enum e_rgb_shifts
 	RGB_BLU = 0
 }	t_rgb;
 
+enum e_event
+{
+	ON_KEYDOWN = 2,
+	ON_KEYUP = 3,
+	ON_MOUSEDOWN = 4,
+	ON_MOUSEUP = 5,
+	ON_MOUSEMOVE = 6,
+	ON_EXPOSE = 12,
+	ON_DESTROY = 17
+};
+
+enum e_key
+{
+	KEY_C_OLOUR = 8,
+	KEY_P_ROJECTION = 35,
+	KEY_ESC = 53,
+	KEY_L_CMD = 259,
+	KEY_R_CMD = 260
+};
+
+enum e_mouse
+{
+	MOVE = 0,
+	LEFT_CLICK = 1,
+	RIGHT_CLICK = 2,
+	MIDDLE_CLICK = 3,
+	SCROLL_UP = 4,
+	SCROLL_DN = 5
+};
+
 typedef struct s_point
 {
 	int		row;
@@ -74,6 +104,8 @@ typedef struct s_keyboard		t_key;
 typedef struct s_user_inputs	t_ipt;
 typedef struct s_program		t_prg;
 typedef void					(*t_ftype)(struct s_program *);
+typedef int						(*t_hndlr)(struct s_program *, t_pt *);
+
 
 struct s_program
 {
@@ -151,5 +183,6 @@ void			burningship_scales(t_ldbl_pt *p0, t_pt px);
 long double		abs_ldbl(long double ldbl);
 unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *p0);
 void			julia_scales(t_ldbl_pt *p0, t_pt px);
+int				vary_julia_constant(t_prg *p);
 
 #endif

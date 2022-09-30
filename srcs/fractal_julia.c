@@ -6,11 +6,20 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:00:44 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 13:09:54 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+int	vary_julia_constant(t_prg *p)
+{
+	p->fct->constant.row += 0.01L;
+	p->fct->constant.col += 0.01L;
+	julia(p);
+	draw(p);
+	return (EXIT_SUCCESS);
+}
 
 unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *z)
 {

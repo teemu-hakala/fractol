@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/30 11:39:28 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/30 13:25:00 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ FILES = \
 	color_graphs \
 	pixelput \
 	exit \
-	abs_ldbl
+	abs_ldbl \
+	hooks \
+	mouse
 
 SRCS_DIR = srcs
 SRCS = $(addprefix $(SRCS_DIR)/, $(addsuffix .c, $(FILES)))
