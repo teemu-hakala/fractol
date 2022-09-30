@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:25:08 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 14:39:57 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 16:43:25 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	mouse_handler_scroll_up(t_prg *p, t_pt *mse)
 {
 	(void)mse;
 	p->fct->zoom *= 1.1L;
-	p->fct->iter /= 1.07L;
+	p->fct->iter /= 1.07L; //if left CMD is toggled -> only increase iterations
 	return (EXIT_SUCCESS);
 }
 
