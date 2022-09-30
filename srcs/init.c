@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:29:41 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 13:16:06 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 13:39:17 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ t_prg	*init(t_prg *p)
 	init_img(p->mlx);
 	init_fct(p->fct);
 	init_ipt(p->ipt);
+	hooks(p);
 	return (p);
 }

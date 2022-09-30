@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:32:05 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 13:39:49 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,5 +184,7 @@ long double		abs_ldbl(long double ldbl);
 unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *p0);
 void			julia_scales(t_ldbl_pt *p0, t_pt px);
 int				vary_julia_constant(t_prg *p);
+int				mouse_handler_down(int btn, int x, int y, t_prg *p);
+void			hooks(t_prg *p);
 
 #endif
