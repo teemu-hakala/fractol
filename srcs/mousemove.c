@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hooks.c                                            :+:      :+:    :+:   */
+/*   mousemove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 13:17:08 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 14:31:32 by thakala          ###   ########.fr       */
+/*   Created: 2022/09/30 14:21:35 by thakala           #+#    #+#             */
+/*   Updated: 2022/09/30 14:30:55 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	hooks(t_prg *p)
+void	mouse_register_click_down(int btn, int x, int y, t_prg *p)
 {
-	// mlx_hook(p->mlx->win, ON_KEYDOWN, 0, key_handler, p);
-	// mlx_hook(p->mlx->win, ON_DESTROY, 0, close_success, p);
-	mlx_hook(p->mlx->win, ON_MOUSEDOWN, 0, mouse_handler_down, p);
-	mlx_hook(p->mlx->win, ON_MOUSEMOVE, 0, mouse_handler_move, p);
-	mlx_hook(p->mlx->win, ON_MOUSEUP, 0, mouse_handler_up, p);
+	(void)btn;
+	p->ipt->mse.prev = p->ipt->mse.curr;
+	p->ipt->mse.curr = (t_pt){.row = y, .col = x};
+	p->ipt->mse.isdown = TRUE;
+}
+
+void	mouse_register_click_up(int btn, int x, int y, t_prg *p)
+{
+	(void)btn;
+	p->ipt->mse.prev = p->ipt->mse.curr;
+	p->ipt->mse.curr = (t_pt){.row = y, .col = x};
+	p->ipt->mse.isdown = FALSE;
 }

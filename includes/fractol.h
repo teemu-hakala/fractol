@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 14:05:39 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 14:45:15 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
-# define INITIAL_ITERATIONS 5//127
+# define INITIAL_ITERATIONS 10//127
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -121,6 +121,7 @@ struct s_fractol
 	long double	zoom;
 	t_pltt		pltt;
 	t_ldbl_pt	constant;
+	t_pt		center;
 };
 
 typedef struct s_minilibx_image
@@ -166,7 +167,7 @@ void			julia(t_prg *p);
 void			mandelbrot(t_prg *p);
 void			burningship(t_prg *p);
 long double		eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
-unsigned int	palette(t_prg *pr, uint64_t iteration);
+unsigned int	palette(t_prg *pr, long double iteration);
 t_prg			*draw(t_prg *p);
 void			pixelput(t_img *img, int x, int y, int colour);
 int				loop(t_prg *p);
@@ -187,5 +188,10 @@ void			julia_scales(t_ldbl_pt *p0, t_pt px);
 int				vary_julia_constant(t_prg *p);
 int				mouse_handler_down(int btn, int x, int y, t_prg *p);
 void			hooks(t_prg *p);
+void			mouse_register_click_down(int btn, int x, int y, t_prg *p);
+void			mouse_register_click_up(int btn, int x, int y, t_prg *p);
+int				mouse_handler_move(int x, int y, t_prg *p);
+int				mouse_handler_up(int btn, int x, int y, t_prg *p);
+void			pan(t_prg *p);
 
 #endif
