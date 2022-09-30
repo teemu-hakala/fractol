@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 10:53:36 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:22:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
-# define INITIAL_ITERATIONS 100
+# define INITIAL_ITERATIONS 10
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -86,7 +86,7 @@ struct s_fractol
 {
 	t_ftype		type;
 	uint64_t	iter;
-	uint64_t	zoom; //perhaps a floating-point type instead?
+	long double	zoom;
 	t_pltt		pltt;
 };
 

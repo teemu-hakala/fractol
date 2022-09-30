@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:15:58 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 11:04:51 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:11:06 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 long double	scale(long double low, int interval, long double high)
 {
 	return ((high - low) / (long double) interval);
-}
-
-long double	scaler(long double target_scale, int pixel_span_0)
-{
-	return (target_scale / (long double) pixel_span_0);
 }
 
 void	mandelbrot_scales(t_ldbl_pt *p0, t_pt px)
@@ -38,7 +33,7 @@ void	mandelbrot_scales(t_ldbl_pt *p0, t_pt px)
 		}
 		else
 		{
-			scales.hor =  scales.ver;
+			scales.hor = scales.ver;
 			scales.ver = scales.ver;
 		}
 	}
