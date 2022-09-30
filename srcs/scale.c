@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:15:58 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 10:53:04 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:04:51 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ void	mandelbrot_scales(t_ldbl_pt *p0, t_pt px)
 	if (scales.calculated == FALSE)
 	{
 		scales = (t_scale_pt){.ver = \
-			scale(-1.12L, WIN_HEIGHT, 1.12L), .hor = \
-			scale(-2.00L, WIN_WIDTH, 0.47L), .calculated = TRUE};
+			scale(-2.0L, WIN_HEIGHT, 2.0L), .hor = \
+			scale(-2.5L, WIN_WIDTH, 1.5L), .calculated = TRUE};
 		if (scales.ver < scales.hor)
 		{
-			scales.ver = scaler(scales.hor * px.row, px.col);
+			scales.ver = scales.hor;
 			scales.hor = scales.hor;
 		}
 		else
 		{
-			scales.hor = scaler(scales.ver * px.col, px.row);
+			scales.hor =  scales.ver;
 			scales.ver = scales.ver;
 		}
 	}
