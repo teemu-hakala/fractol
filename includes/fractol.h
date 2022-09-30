@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 17:39:17 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 10:39:33 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,13 @@ typedef struct s_long_double_coordinate
 	long double	row;
 	long double	col;
 }	t_ldbl_pt;
+
+typedef struct s_ldbl_scale_pt
+{
+	long double	ver;
+	long double	hor;
+	t_bool		calculated;
+}	t_scale_pt;
 
 typedef struct s_fractol		t_fct;
 typedef struct s_minilibx		t_mlx;
@@ -124,7 +131,6 @@ void		exit_msg(const char *message, unsigned char value);
 void		julia(t_prg *p);
 void		mandelbrot(t_prg *p);
 void		burningship(t_prg *p);
-long double	scale(long double low, int interval, int pos, long double high);
 long double	eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
 int			palette(t_prg *pr, uint64_t iteration);
 t_prg		*draw(t_prg *p);

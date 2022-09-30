@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/29 16:43:42 by thakala          ###   ########.fr        #
+#    Updated: 2022/09/30 09:48:18 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,11 +51,11 @@ MLX = -lmlx -framework OpenGL -framework AppKit
 .PHONY: all
 all: $(NAME)
 
-$(NAME): .prerequisites libft/libft.a $(OBJS)
+$(NAME): .prerequisites libft/libft.a $(OBJS) Makefile
 	touch .prerequisites
 	$(CC) $(CFLAGS) $(INCS) $(MATH) $(MLX) libft/libft.a $(OBJS) -o $@
 
-$(OBJS): $(OBJS_DIR)/%.o:$(SRCS_DIR)/%.c
+$(OBJS): $(OBJS_DIR)/%.o:$(SRCS_DIR)/%.c $(HDRS) Makefile
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 
 .prerequisites: libft/libft.a $(DIRS) $(HDRS) $(SRCS)
