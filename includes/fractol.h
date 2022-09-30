@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:12:11 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:37:16 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 # define STR_MANDELBROT "mandelbrot"
 # define STR_BURNINGSHIP "burningship"
 # define WIN_WIDTH 1821
+# define WIN_WIDTH_LDBL 1821.0L
 # define WIN_HEIGHT 1024
 # define WIN_NAME "thakala's fract'ol"
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
 # define INITIAL_ITERATIONS 10//127
+# define RADIUS 10000
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -148,6 +150,7 @@ struct s_mouse
 	t_pt	diff;
 	t_bool	isdown;
 	t_bool	refresh;
+	t_pt	julia;
 };
 
 struct s_keyboard
@@ -181,10 +184,10 @@ void			init_ipt(t_ipt *i);
 unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
 void			mandelbrot_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
 unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
-void			burningship_scales(t_ldbl_pt *p0, t_pt px);
+void			burningship_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
 long double		abs_ldbl(long double ldbl);
 unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *p0);
-void			julia_scales(t_ldbl_pt *p0, t_pt px);
+void			julia_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
 int				vary_julia_constant(t_prg *p);
 int				mouse_handler_down(int btn, int x, int y, t_prg *p);
 void			hooks(t_prg *p);

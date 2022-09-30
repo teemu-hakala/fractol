@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:45:12 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:16:49 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	julia(t_prg *pr)
 		px.col = -WIN_WIDTH / 2;
 		while (px.col < WIN_WIDTH / 2)
 		{
-			julia_scales(&p0, px);
+			julia_scales(pr, &p0, px);
 			pixelput(&pr->mlx->img, px.col + WIN_WIDTH / 2, \
 				px.row + WIN_HEIGHT / 2, (int)julia_plot(pr, &p0));
 			px.col++;
@@ -63,7 +63,7 @@ void	burningship(t_prg *pr)
 		px.col = -WIN_WIDTH / 2;
 		while (px.col < WIN_WIDTH / 2)
 		{
-			burningship_scales(&p0, px);
+			burningship_scales(pr, &p0, px);
 			pixelput(&pr->mlx->img, px.col + WIN_WIDTH / 2, \
 				px.row + WIN_HEIGHT / 2, (int)burningship_plot(pr, &p0));
 			px.col++;

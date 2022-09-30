@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:25:08 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:09:10 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:40:05 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,11 @@ int	mouse_handler_down(int btn, int x, int y, t_prg *p)
 
 int	mouse_handler_move(int x, int y, t_prg *p)
 {
+	if (p->fct->type == julia && !p->ipt->mse.isdown)
+	{
+		p->ipt->mse.julia = (t_pt){.row = y, .col = x};
+		return (!draw(p));
+	}
 	if (p->ipt->mse.isdown == TRUE)
 	{
 		p->ipt->mse.prev = p->ipt->mse.curr;
