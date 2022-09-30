@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 13:39:49 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 14:05:39 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
-# define INITIAL_ITERATIONS 127
+# define INITIAL_ITERATIONS 5//127
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -74,8 +74,8 @@ enum e_mouse
 	LEFT_CLICK = 1,
 	RIGHT_CLICK = 2,
 	MIDDLE_CLICK = 3,
-	SCROLL_UP = 4,
-	SCROLL_DN = 5
+	SCROLL_DN = 4,
+	SCROLL_UP = 5
 };
 
 typedef struct s_point
@@ -117,7 +117,7 @@ struct s_program
 struct s_fractol
 {
 	t_ftype		type;
-	uint64_t	iter;
+	long double	iter;
 	long double	zoom;
 	t_pltt		pltt;
 	t_ldbl_pt	constant;
@@ -146,6 +146,7 @@ struct s_mouse
 	t_pt	curr;
 	t_pt	diff;
 	t_bool	isdown;
+	t_bool	refresh;
 };
 
 struct s_keyboard
@@ -177,7 +178,7 @@ void			init_img(t_mlx *m);
 void			init_fct(t_fct *f);
 void			init_ipt(t_ipt *i);
 unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
-void			mandelbrot_scales(t_ldbl_pt *p0, t_pt px);
+void			mandelbrot_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
 unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
 void			burningship_scales(t_ldbl_pt *p0, t_pt px);
 long double		abs_ldbl(long double ldbl);
