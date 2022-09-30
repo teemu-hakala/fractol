@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 11:33:47 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:40:13 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
-# define INITIAL_ITERATIONS 10
+# define INITIAL_ITERATIONS 127
 # include <math.h>
 # include <stdlib.h>
 # include "libft.h"
@@ -147,5 +147,5 @@ unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
 void			mandelbrot_scales(t_ldbl_pt *p0, t_pt px);
 unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
 void			burningship_scales(t_ldbl_pt *p0, t_pt px);
-
+long double		abs_ldbl(long double ldbl);
 #endif
