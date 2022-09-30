@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 11:22:34 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:33:47 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,24 +126,26 @@ struct s_user_inputs
 	t_key	key;
 };
 
-void		usage(void);
-void		exit_msg(const char *message, unsigned char value);
-void		julia(t_prg *p);
-void		mandelbrot(t_prg *p);
-void		burningship(t_prg *p);
-long double	eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
-int			palette(t_prg *pr, uint64_t iteration);
-t_prg		*draw(t_prg *p);
-void		pixelput(t_img *img, int x, int y, int colour);
-int			loop(t_prg *p);
-void		fetch_new_image(t_mlx *m);
-t_prg		*init(t_prg *p);
-void		init_mlx(t_mlx *m);
-void		init_win(t_mlx *m);
-void		init_img(t_mlx *m);
-void		init_fct(t_fct *f);
-void		init_ipt(t_ipt *i);
-int			mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
-void		mandelbrot_scales(t_ldbl_pt *p0, t_pt px);
+void			usage(void);
+void			exit_msg(const char *message, unsigned char value);
+void			julia(t_prg *p);
+void			mandelbrot(t_prg *p);
+void			burningship(t_prg *p);
+long double		eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
+unsigned int	palette(t_prg *pr, uint64_t iteration);
+t_prg			*draw(t_prg *p);
+void			pixelput(t_img *img, int x, int y, int colour);
+int				loop(t_prg *p);
+void			fetch_new_image(t_mlx *m);
+t_prg			*init(t_prg *p);
+void			init_mlx(t_mlx *m);
+void			init_win(t_mlx *m);
+void			init_img(t_mlx *m);
+void			init_fct(t_fct *f);
+void			init_ipt(t_ipt *i);
+unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
+void			mandelbrot_scales(t_ldbl_pt *p0, t_pt px);
+unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
+void			burningship_scales(t_ldbl_pt *p0, t_pt px);
 
 #endif

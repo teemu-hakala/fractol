@@ -6,13 +6,13 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/29 17:01:09 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 11:33:55 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0)
+unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0)
 {
 	t_ldbl_pt	pt;
 	t_ldbl_pt	p2;
