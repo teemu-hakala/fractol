@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 10:39:33 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 10:53:36 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # define STR_JULIA "julia"
 # define STR_MANDELBROT "mandelbrot"
 # define STR_BURNINGSHIP "burningship"
-# define WIN_WIDTH 1024
-# define WIN_HEIGHT 720
+# define WIN_WIDTH 1821
+# define WIN_HEIGHT 1024
 # define WIN_NAME "thakala's fract'ol"
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
