@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 11:40:13 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 13:00:20 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ struct s_fractol
 	uint64_t	iter;
 	long double	zoom;
 	t_pltt		pltt;
+	t_ldbl_pt	constant;
 };
 
 typedef struct s_minilibx_image
@@ -148,4 +149,7 @@ void			mandelbrot_scales(t_ldbl_pt *p0, t_pt px);
 unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
 void			burningship_scales(t_ldbl_pt *p0, t_pt px);
 long double		abs_ldbl(long double ldbl);
+unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *p0);
+void			julia_scales(t_ldbl_pt *p0, t_pt px);
+
 #endif
