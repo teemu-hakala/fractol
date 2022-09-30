@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:37:16 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:44:52 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,5 +198,6 @@ int				mouse_handler_up(int btn, int x, int y, t_prg *p);
 void			pan(t_prg *p);
 int				key_handler(int key, t_prg *p);
 int				close_success(void);
+void			rotate_colour(t_prg *p);
 
 #endif

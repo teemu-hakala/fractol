@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:33:31 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 14:03:28 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:41:52 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	init_fct(t_fct *f)
 
 void	init_ipt(t_ipt *i)
 {
-	//i->mse = (t_mse){};
 	i->mse.refresh = TRUE;
 	i->key = (t_key){};
 }

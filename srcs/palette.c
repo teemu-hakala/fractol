@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:39:07 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 14:15:08 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:52:16 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static unsigned int	palette_mono(t_prg *pr, long double iter, t_rgb ch)
 
 	iteration_percentage = iter / pr->fct->iter;
 	return ((unsigned int) \
-		(eight_bit_color_graph_sqrt_x_flip(iteration_percentage)) << ch);
+		(0xFF * eight_bit_color_graph_sqrt_x_flip(iteration_percentage)) << ch);
 }
 
 static unsigned int	palette_grayscale(t_prg *pr, long double iter)

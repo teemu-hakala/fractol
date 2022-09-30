@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keyboard.c                                         :+:      :+:    :+:   */
+/*   rotators.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 13:34:54 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:47:26 by thakala          ###   ########.fr       */
+/*   Created: 2022/09/30 17:44:11 by thakala           #+#    #+#             */
+/*   Updated: 2022/09/30 17:46:00 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	key_handler(int key, t_prg *p)
+void	rotate_colour(t_prg *p)
 {
-	if (key == KEY_ESC)
-		exit_msg("Exited successfully!\n", EXIT_SUCCESS);
-	if (key == KEY_L_CMD || key == KEY_R_CMD)
-		p->ipt->key.cmd_toggled = !p->ipt->key.cmd_toggled;
-	if (key == KEY_C_OLOUR)
-	{
-		rotate_colour(p);
-		draw(p);
-	}
-	return (EXIT_SUCCESS);
+	if (p->fct->pltt == PALETTE_GRAYSCALE)
+		p->fct->pltt = PALETTE_MONO_RED;
+	else if (p->fct->pltt == PALETTE_MONO_RED)
+		p->fct->pltt = PALETTE_MONO_GRN;
+	else if (p->fct->pltt == PALETTE_MONO_GRN)
+		p->fct->pltt = PALETTE_MONO_BLU;
+	else if (p->fct->pltt == PALETTE_MONO_BLU)
+		p->fct->pltt = PALETTE_GRAYSCALE;
 }
