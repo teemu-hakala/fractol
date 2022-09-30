@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:44:52 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:54:44 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,6 @@ typedef struct s_user_inputs	t_ipt;
 typedef struct s_program		t_prg;
 typedef void					(*t_ftype)(struct s_program *);
 typedef int						(*t_hndlr)(struct s_program *, t_pt *);
-
 
 struct s_program
 {

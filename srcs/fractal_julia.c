@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:42:40 by thakala          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:54:56 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *z)
 	long double	col_tmp;
 
 	i = 0;
-	while (z->col * z->col + z->row * z->row < RADIUS * RADIUS && i < pr->fct->iter)
+	while (z->col * z->col + z->row * z->row < RADIUS * RADIUS && \
+		i < pr->fct->iter)
 	{
 		col_tmp = z->col * z->col - z->row * z->row;
 		z->row = 2 * z->col * z->row + pr->ipt->mse.julia.row / WIN_WIDTH_LDBL;
