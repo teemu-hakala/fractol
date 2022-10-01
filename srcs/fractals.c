@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:41:52 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:16:49 by thakala          ###   ########.fr       */
+/*   Updated: 2022/10/01 13:49:19 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	mandelbrot(t_prg *pr)
 	}
 }
 
-void	burningship(t_prg *pr)
+void	burning_ship(t_prg *pr)
 {
 	t_pt		px;
 	t_ldbl_pt	p0;
@@ -63,9 +63,9 @@ void	burningship(t_prg *pr)
 		px.col = -WIN_WIDTH / 2;
 		while (px.col < WIN_WIDTH / 2)
 		{
-			burningship_scales(pr, &p0, px);
+			burning_ship_scales(pr, &p0, px);
 			pixelput(&pr->mlx->img, px.col + WIN_WIDTH / 2, \
-				px.row + WIN_HEIGHT / 2, (int)burningship_plot(pr, &p0));
+				px.row + WIN_HEIGHT / 2, (int)burning_ship_plot(pr, &p0));
 			px.col++;
 		}
 		px.row++;

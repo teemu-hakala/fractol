@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:15:58 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:55:14 by thakala          ###   ########.fr       */
+/*   Updated: 2022/10/01 13:49:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	mandelbrot_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px)
 	p0->col = scales.hor * (px.col - pr->fct->center.col / pr->fct->zoom);
 }
 
-void	burningship_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px)
+void	burning_ship_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px)
 {
 	static t_scale_pt	scales;
 

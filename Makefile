@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 10:44:14 by thakala           #+#    #+#              #
-#    Updated: 2022/09/30 17:46:17 by thakala          ###   ########.fr        #
+#    Updated: 2022/10/01 13:48:40 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ FILES = \
 	fractals \
 	fractal_julia \
 	fractal_mandelbrot \
-	fractal_burningship \
+	fractal_burning_ship \
 	scale \
 	palette \
 	color_graphs \

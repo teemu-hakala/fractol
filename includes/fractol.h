@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:14:24 by thakala           #+#    #+#             */
-/*   Updated: 2022/09/30 17:54:44 by thakala          ###   ########.fr       */
+/*   Updated: 2022/10/01 13:52:59 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 # define FRACTOL_H
 # define STR_JULIA "julia"
 # define STR_MANDELBROT "mandelbrot"
-# define STR_BURNINGSHIP "burningship"
-# define WIN_WIDTH 1821
-# define WIN_WIDTH_LDBL 1821.0L
-# define WIN_HEIGHT 1024
+# define STR_BURNING_SHIP "burning_ship"
+# define WIN_WIDTH 720
+# define WIN_WIDTH_LDBL 720.0L
+# define WIN_HEIGHT 405
 # define WIN_NAME "thakala's fract'ol"
 # define ERR_NULL_MLX "GOT NULL: p->mlx.mlx = mlx_init();\n"
 # define ERR_NULL_WIN "GOT NULL: p->mlx.win = mlx_new_window();\n"
 # define TWO_POW_EIGHT 256
-# define INITIAL_ITERATIONS 10//127
+# define INITIAL_ITERATIONS 10
 # define RADIUS 10000
 # include <math.h>
 # include <stdlib.h>
@@ -52,19 +52,18 @@ typedef enum e_rgb_shifts
 
 enum e_event
 {
-	ON_KEYDOWN = 2,
-	ON_KEYUP = 3,
-	ON_MOUSEDOWN = 4,
-	ON_MOUSEUP = 5,
-	ON_MOUSEMOVE = 6,
+	ON_KEY_DOWN = 2,
+	ON_KEY_UP = 3,
+	ON_MOUSE_DOWN = 4,
+	ON_MOUSE_UP = 5,
+	ON_MOUSE_MOVE = 6,
 	ON_EXPOSE = 12,
 	ON_DESTROY = 17
 };
 
 enum e_key
 {
-	KEY_C_OLOUR = 8,
-	KEY_P_ROJECTION = 35,
+	KEY_COLOUR = 8,
 	KEY_ESC = 53,
 	KEY_L_CMD = 259,
 	KEY_R_CMD = 260
@@ -167,7 +166,7 @@ void			usage(void);
 void			exit_msg(const char *message, unsigned char value);
 void			julia(t_prg *p);
 void			mandelbrot(t_prg *p);
-void			burningship(t_prg *p);
+void			burning_ship(t_prg *p);
 long double		eight_bit_color_graph_sqrt_x_flip(long double iter_perc);
 unsigned int	palette(t_prg *pr, long double iteration);
 t_prg			*draw(t_prg *p);
@@ -182,8 +181,8 @@ void			init_fct(t_fct *f);
 void			init_ipt(t_ipt *i);
 unsigned int	mandelbrot_plot(t_prg *pr, t_ldbl_pt *p0);
 void			mandelbrot_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
-unsigned int	burningship_plot(t_prg *pr, t_ldbl_pt *p0);
-void			burningship_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
+unsigned int	burning_ship_plot(t_prg *pr, t_ldbl_pt *p0);
+void			burning_ship_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
 long double		abs_ldbl(long double ldbl);
 unsigned int	julia_plot(t_prg *pr, t_ldbl_pt *p0);
 void			julia_scales(t_prg *pr, t_ldbl_pt *p0, t_pt px);
